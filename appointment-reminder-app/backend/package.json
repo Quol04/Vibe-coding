@@ -1,0 +1,22 @@
+{
+  "name": "appointment-reminder-app",
+  "version": "1.0.0",
+  "description": "A tool that automatically reminds both doctors and patients of appointments via SMS, WhatsApp, or other channels.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.10.9",
+    "dotenv": "^8.2.0",
+    "twilio": "^3.67.0",
+    "node-cron": "^2.0.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}
