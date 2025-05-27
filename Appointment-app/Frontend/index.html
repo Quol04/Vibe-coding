@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Reminder System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+    <nav class="bg-white shadow-lg">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="/" class="text-xl font-bold text-blue-600">AppointmentReminder</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-4" id="nav-links">
+                    <a href="#" class="login-link text-gray-700 hover:text-blue-600">Login</a>
+                    <a href="#" class="register-link text-gray-700 hover:text-blue-600">Register</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 py-8">
+        <!-- Auth Forms -->
+        <div id="auth-forms" class="max-w-md mx-auto bg-white rounded-lg shadow-md p-6 mb-8">
+            <!-- Login Form -->
+            <div id="login-form" class="hidden">
+                <h2 class="text-2xl font-bold mb-4">Login</h2>
+                <form id="loginForm">
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
+                        <input type="email" id="login-email" class="w-full px-3 py-2 border rounded-lg" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="password">Password</label>
+                        <input type="password" id="login-password" class="w-full px-3 py-2 border rounded-lg" required>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">Login</button>
+                </form>
+            </div>
+
+            <!-- Register Form -->
+            <div id="register-form" class="hidden">
+                <h2 class="text-2xl font-bold mb-4">Register</h2>
+                <form id="registerForm">
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="name">Name</label>
+                        <input type="text" id="register-name" class="w-full px-3 py-2 border rounded-lg" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="email">Email</label>
+                        <input type="email" id="register-email" class="w-full px-3 py-2 border rounded-lg" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="password">Password</label>
+                        <input type="password" id="register-password" class="w-full px-3 py-2 border rounded-lg" required>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="role">Role</label>
+                        <select id="register-role" class="w-full px-3 py-2 border rounded-lg" required>
+                            <option value="patient">Patient</option>
+                            <option value="doctor">Doctor</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="phone">Phone</label>
+                        <input type="tel" id="register-phone" class="w-full px-3 py-2 border rounded-lg" required>
+                    </div>
+                    <div id="specialization-field" class="mb-4 hidden">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="specialization">Specialization</label>
+                        <input type="text" id="register-specialization" class="w-full px-3 py-2 border rounded-lg">
+                    </div>
+                    <div class="mb-4">
+                        <label class="block text-gray-700 text-sm font-bold mb-2" for="preferred-contact">Preferred Contact Method</label>
+                        <select id="register-preferred-contact" class="w-full px-3 py-2 border rounded-lg" required>
+                            <option value="SMS">SMS</option>
+                            <option value="WhatsApp">WhatsApp</option>
+                            <option value="Both">Both</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">Register</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Dashboard -->
+        <div id="dashboard" class="hidden">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Appointments List -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h2 class="text-2xl font-bold mb-4">My Appointments</h2>
+                    <div id="appointments-list" class="space-y-4"></div>
+                </div>
+
+                <!-- New Appointment Form -->
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h2 class="text-2xl font-bold mb-4">Schedule Appointment</h2>
+                    <form id="appointmentForm">
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="doctor">Doctor</label>
+                            <select id="doctor-select" class="w-full px-3 py-2 border rounded-lg" required></select>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="date">Date</label>
+                            <input type="date" id="appointment-date" class="w-full px-3 py-2 border rounded-lg" required>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="time">Time</label>
+                            <input type="time" id="appointment-time" class="w-full px-3 py-2 border rounded-lg" required>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-gray-700 text-sm font-bold mb-2" for="notes">Notes</label>
+                            <textarea id="appointment-notes" class="w-full px-3 py-2 border rounded-lg" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded-lg hover:bg-blue-700">Schedule Appointment</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/auth.js"></script>
+    <script src="js/appointments.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
