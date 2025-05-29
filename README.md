@@ -26,6 +26,8 @@ The backend is built using Node.js and Express, and it connects to a MongoDB dat
 
 - **package.json**: Configuration file for the backend, listing dependencies and scripts for running the server.
 
+---
+
 ### Frontend
 
 The frontend is built using React.js and styled with Tailwind CSS. The structure is as follows:
@@ -45,6 +47,8 @@ The frontend is built using React.js and styled with Tailwind CSS. The structure
 - **tailwind.config.js**: Configuration file for Tailwind CSS, specifying customizations and settings for the utility-first CSS framework.
 
 - **package.json**: Configuration file for the frontend, listing dependencies and scripts for building and running the React app.
+
+---
 
 ## Getting Started
 
@@ -78,6 +82,8 @@ To get started with the project, follow these steps:
    ```
    npm start
    ```
+
+---
 
 ## Features
 
