@@ -69,6 +69,3 @@ To get started with the project, follow these steps:
 - User-friendly interface for managing appointments.
 - Secure and scalable backend using Node.js and MongoDB.
 
-## Contributing
-
-Contributions are welcome! Please open an issue or submit a pull request for any improvements or features you'd like to add.
