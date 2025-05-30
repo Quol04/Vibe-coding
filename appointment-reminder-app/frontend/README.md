@@ -2,11 +2,17 @@
 
 This project is a web application designed to help clinics and private doctors manage patient appointments effectively. It automatically reminds both doctors and patients of appointments via SMS, WhatsApp, or other communication channels.
 
+---
+
 ## Technologies Used
 
 - **Frontend**: React.js with Tailwind CSS
+
 - **Backend**: Node.js with Express
+
 - **Database**: MongoDB
+
+---
 
 ## Features
 
@@ -15,12 +21,17 @@ This project is a web application designed to help clinics and private doctors m
 - Integration with SMS and WhatsApp for notifications.
 - Secure and scalable backend with RESTful API.
 
+---
+
 ## Getting Started
 
 ### Prerequisites
 
 - Node.js and npm installed on your machine.
+
 - MongoDB database set up and running.
+
+---
 
 ### Installation
 
