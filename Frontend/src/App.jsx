@@ -1,8 +1,17 @@
-
+import React,{useState,useEffect} from 'react'
 import './App.css'
 
 function App() {
-  
+  const [reminder, setReminder] = useState('');
+
+  const handleInputChange = (event) => {
+    setReminder(event.target.value);
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Logic to send reminder via chosen channel
+  };
 
   return (
     <>
