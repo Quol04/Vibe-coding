@@ -29,9 +29,8 @@ function App() {
   return (
     <>
   <h1>Clinics and private doctors often lose track of patient follow-ups</h1>
-      
- {/* Challenge: Develop a tool that automatically reminds both doctors and patients of appointments via SMS, WhatsApp, or other channels. */}
- <div className="max-w-xl mx-auto p-4">
+
+  <div className="max-w-xl mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4">Appointment Reminder Tool</h1>
       <form onSubmit={handleSubmit} className="space-y-2 mb-6">
         <input className="border p-2 w-full" name="patientName" placeholder="Patient Name" value={form.patientName} onChange={handleChange} required />
